@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+/* Modulos del Proyecto*/
 // Module Main -- Modulo para la pagina principal
 import { MainModule } from './main/main.module';
 
