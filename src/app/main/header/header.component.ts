@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  valores = '';
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  // buscar(event: any){
+  //   this.valores += event.target.valores + ' | ';
+  //   console.log("inicio");
+  // }
+
+  // buscar(event: KeyboardEvent){
+  //   // this.valores += (<HTMLInputElement>event.target).value + ' | ';
+  //   console.log(event.key);
+  // }
 }

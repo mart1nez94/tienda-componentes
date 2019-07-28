@@ -11,12 +11,31 @@
                 <input type="text" matInput placeholder="Buscar">
             </mat-form-field>
         </form>
-        <button mat-icon-button>
+        <button mat-icon-button [matMenuTriggerFor]="menuCarrito" matBadge="0" matBadgePosition="before"
+            matBadgeColor="accent">
             <mat-icon>shopping_cart</mat-icon>
         </button>
-        <button mat-icon-button>
+        <mat-menu #menuCarrito="matMenu">
+            <button mat-menu-item>
+                <mat-icon>attach_money</mat-icon>
+                <span>Subtotal: </span>
+            </button>
+        </mat-menu>
+        <button mat-icon-button [matMenuTriggerFor]="menuCuenta">
             <mat-icon>face</mat-icon>
         </button>
+        <mat-menu #menuCuenta="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="menuActualizar">
+                <mat-icon>assignment_ind</mat-icon>
+                <span>Cuenta</span>
+            </button>
+        </mat-menu>
+        <mat-menu #menuActualizar="matMenu">
+            <button mat-menu-item>
+                <mat-icon>assignment</mat-icon>
+                <span>Cuenta</span>
+            </button>
+        </mat-menu>
         <button mat-icon-button>
             <mat-icon>more_vert</mat-icon>
         </button>
