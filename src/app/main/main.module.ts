@@ -11,6 +11,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 /* Componentes del Modulo Main */
 // Header Component -- Header de la pagina principal
@@ -32,7 +35,10 @@ import { FooterComponent } from './footer/footer.component';
     MatButtonModule,
     MatInputModule,
     MatMenuModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatDividerModule,
+    MatListModule,
+    MatGridListModule
   ]
 })
 export class MainModule { }
