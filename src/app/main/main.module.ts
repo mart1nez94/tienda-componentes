@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { AppRoutingModule } from './../app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 /* Modulos de Angular Material */
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -22,6 +25,8 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     CommonModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,

@@ -8,11 +8,13 @@ import { FooterComponent } from './main/footer/footer.component';
 const routes: Routes = [
   {
     path: '',
-    component: HeaderComponent
-  },
-  {
-    path: '',
-    component: FooterComponent
+    component: HeaderComponent,
+    children: [
+      {
+        path: '',
+        component: FooterComponent
+      }
+    ]
   }
 ];
 
