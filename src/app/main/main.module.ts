@@ -15,6 +15,9 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 
+/* Modulos de Font Awesome */
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+
 /* Componentes del Modulo Main */
 // Header Component -- Header de la pagina principal
 import { HeaderComponent } from './header/header.component';
@@ -38,7 +41,8 @@ import { FooterComponent } from './footer/footer.component';
     MatBadgeModule,
     MatDividerModule,
     MatListModule,
-    MatGridListModule
+    MatGridListModule,
+    FontAwesomeModule
   ]
 })
 export class MainModule { }
