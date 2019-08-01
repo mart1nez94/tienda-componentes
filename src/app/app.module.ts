@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 /* Modulos del Proyecto*/
 // Module Main -- Modulo para la pagina principal
 import { MainModule } from './main/main.module';
+import { HomepageModule } from './homepage/homepage.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MainModule } from './main/main.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MainModule
+    MainModule,
+    HomepageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
