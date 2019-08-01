@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 /* Modulos del Proyecto*/
 // Module Main -- Modulo para la pagina principal
 import { MainModule } from './main/main.module';
+// Module HomePage -- Modulo para mostrar informacion en la pagina principal
 import { HomepageModule } from './homepage/homepage.module';
 
 @NgModule({
