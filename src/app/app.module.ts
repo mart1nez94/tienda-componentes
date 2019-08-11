@@ -12,6 +12,8 @@ import { MainModule } from './main/main.module';
 import { HomepageModule } from './homepage/homepage.module';
 // Module Productos -- Modulo para mostrar productos e informacion de cada producto
 import { ProductsModule } from './products/products.module';
+// Module Login -- Modulo para iniciar sesion en el sistema
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { ProductsModule } from './products/products.module';
     BrowserAnimationsModule,
     MainModule,
     HomepageModule,
-    ProductsModule
+    ProductsModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
