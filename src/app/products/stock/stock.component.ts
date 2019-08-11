@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from './../products.service';
 
 @Component({
   selector: 'app-stock',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stock.component.scss']
 })
 export class StockComponent implements OnInit {
+  stock: Array<any>;
 
-  constructor() { }
+  constructor(protected _productsService: ProductsService,) { }
 
   ngOnInit() {
+    this.obtenerStock();
   }
 
+  obtenerStock(): void {
+    this._productsService.getStock().subscribe(resultado => {
+      this.stock = resultado;
+    });
+  }
 }

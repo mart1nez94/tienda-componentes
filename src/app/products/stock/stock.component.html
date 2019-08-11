@@ -1,2 +1,111 @@
-<p>stock works!</p>
+<div>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Filtros</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Filtrar por marca
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-list dense>
+                        <mat-list-item><button mat-raised-button color="primary">ASUS</button></mat-list-item>
+                        <mat-list-item><button mat-raised-button color="primary">HYPERX</button></mat-list-item>
+                        <mat-list-item><button mat-raised-button color="primary">SEAGATE</button></mat-list-item>
+                        <mat-list-item><button mat-raised-button color="primary">GIGABYTE</button></mat-list-item>
+                        <mat-list-item><button mat-raised-button color="primary">INTEL</button></mat-list-item>
+                        <mat-list-item><button mat-raised-button color="primary">CORSAIR</button></mat-list-item>
+                    </mat-list>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Filtrar por categoria
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-list dense>
+                        <mat-list-item><button mat-raised-button color="primary">TARJETAS DE VIDEO</button>
+                        </mat-list-item>
+                        <mat-list-item><button mat-raised-button color="primary">MEMORIAS RAM</button></mat-list-item>
+                        <mat-list-item><button mat-raised-button color="primary">DISCOS DUROS</button></mat-list-item>
+                        <mat-list-item><button mat-raised-button color="primary">TARJETAS MADRE</button></mat-list-item>
+                        <mat-list-item><button mat-raised-button color="primary">PROCESADORES</button></mat-list-item>
+                        <mat-list-item><button mat-raised-button color="primary">GABINETES</button></mat-list-item>
+                    </mat-list>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Filtrar por elemento
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-list dense>
+                        <mat-list-item><button mat-raised-button color="primary">NOVEDADES</button></mat-list-item>
+                        <mat-list-item><button mat-raised-button color="primary">MEJOR VALORADOS</button>
+                        </mat-list-item>
+                    </mat-list>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card-content>
+    </mat-card>
+</div>
+<br>
+<br>
+<div>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Productos</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div>
+                <mat-list *ngFor="let st of stock">
+                    <mat-list-item>
+                        <img matListAvatar scr="">
+                        <h3 matLine><b>{{ st.nombre }}</b></h3>
+                        <h3 matLine>{{ st.nombre_marca }}</h3>
+                        <p matLine>
+                            <span>Informacion</span>
+                        </p>
+                        <p matLine>
+                            <span>Precio: <b>{{ st.precio | currency }}</b></span>
+                        </p>
+                        <br>
+                        <div matLine *ngIf="st.valoracion == 5">
+                            <mat-icon color="primary">star_rate</mat-icon>
+                            <mat-icon color="primary">star_rate</mat-icon>
+                            <mat-icon color="primary">star_rate</mat-icon>
+                            <mat-icon color="primary">star_rate</mat-icon>
+                            <mat-icon color="primary">star_rate</mat-icon>
+                        </div>
+                        <div matLine *ngIf="st.valoracion == 4">
+                            <mat-icon color="primary">star_rate</mat-icon>
+                            <mat-icon color="primary">star_rate</mat-icon>
+                            <mat-icon color="primary">star_rate</mat-icon>
+                            <mat-icon color="primary">star_rate</mat-icon>
+                        </div>
+                        <div matLine *ngIf="st.valoracion == 3">
+                            <mat-icon color="primary">star_rate</mat-icon>
+                            <mat-icon color="primary">star_rate</mat-icon>
+                            <mat-icon color="primary">star_rate</mat-icon>
+                        </div>
+                        <div matLine *ngIf="st.valoracion == 2">
+                            <mat-icon color="primary">star_rate</mat-icon>
+                            <mat-icon color="primary">star_rate</mat-icon>
+                        </div>
+                        <div matLine *ngIf="st.valoracion == 1">
+                            <mat-icon color="primary">star_rate</mat-icon>
+                        </div>
+                        <p matLine>
+                            <button mat-raised-button color="primary">AÑADIR AL CARRITO</button>
+                        </p>
+                        <mat-divider></mat-divider>
+                    </mat-list-item>
+                </mat-list>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
 <router-outlet></router-outlet>
