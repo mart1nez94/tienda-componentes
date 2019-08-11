@@ -21,7 +21,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 /* Componentes del Modulo Main */
 // Header Component -- Header de la pagina principal
 import { HeaderComponent } from './header/header.component';
-// Module Main / Footer Component -- Footer de la pagina principal
+// Footer Component -- Footer de la pagina principal
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
