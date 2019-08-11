@@ -8,6 +8,8 @@ import { FooterComponent } from './main/footer/footer.component';
 import { HomeComponent } from './homepage/home/home.component';
 // Module Products / Stock Component -- Informacion de todos los productos en el sistema
 import { StockComponent } from './products/stock/stock.component';
+// Module Login / Account Component -- Acceder al sistema
+import { AccountComponent } from './login/account/account.component';
 
 const routes: Routes = [
   {
@@ -27,6 +29,16 @@ const routes: Routes = [
       {
         path: 'productos',
         component: StockComponent,
+        children: [
+          {
+            path: '',
+            component: FooterComponent
+          }
+        ]
+      },
+      {
+        path: 'sesion',
+        component: AccountComponent,
         children: [
           {
             path: '',
