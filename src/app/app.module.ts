@@ -10,6 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainModule } from './main/main.module';
 // Module HomePage -- Modulo para mostrar informacion en la pagina principal
 import { HomepageModule } from './homepage/homepage.module';
+// Module Productos -- Modulo para mostrar productos e informacion de cada producto
+import { ProductsModule } from './products/products.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { HomepageModule } from './homepage/homepage.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     MainModule,
-    HomepageModule
+    HomepageModule,
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
