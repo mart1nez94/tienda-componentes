@@ -6,6 +6,8 @@ import { HeaderComponent } from './main/header/header.component';
 import { FooterComponent } from './main/footer/footer.component';
 // Module Homepage / Home Component -- Informacion de la pagina principal
 import { HomeComponent } from './homepage/home/home.component';
+// Module Products / Stock Component -- Informacion de todos los productos en el sistema
+import { StockComponent } from './products/stock/stock.component';
 
 const routes: Routes = [
   {
@@ -15,6 +17,16 @@ const routes: Routes = [
       {
         path: '',
         component: HomeComponent,
+        children: [
+          {
+            path: '',
+            component: FooterComponent
+          }
+        ]
+      },
+      {
+        path: 'productos',
+        component: StockComponent,
         children: [
           {
             path: '',
