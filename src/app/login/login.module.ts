@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './../app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 /* Modulos de Angular Material */
 import { MatCardModule } from '@angular/material/card';
@@ -22,6 +23,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 // Account Component -- Acceder al sistema
 import { AccountComponent } from './account/account.component';
 
+
+
 @NgModule({
   declarations: [AccountComponent],
   imports: [
@@ -39,7 +42,8 @@ import { AccountComponent } from './account/account.component';
     MatExpansionModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    HttpClientModule
   ]
 })
 export class LoginModule { }
